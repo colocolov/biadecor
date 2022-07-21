@@ -1,0 +1,61 @@
+.first
+  position: relative
+  background-color: #fff
+  background-image: url(../images/bg/first-bg.jpg)
+  background-size: cover
+  background-repeat: no-repeat
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%)
+
+  &::after
+    position: absolute
+    content: ''
+    top: 0
+    left: 0
+    bottom: 0
+    height: 100%
+    width: 100%
+    background: rgba(0, 0, 0, 0.1)
+    z-index: 0
+  &__container
+    padding-left: 207px
+    padding-top: 200px
+    padding-bottom: 228px
+    // transform: skewY(11deg)
+    z-index: 2
+    position: relative
+  &__head
+    z-index: 2
+    position: relative
+    text-shadow: 0px 3px 36px $black
+    color: $light
+    text-transform: uppercase
+    margin-bottom: 31px
+    letter-spacing: 0.09em
+    &::after
+      position: absolute
+      content: ''
+      bottom: 0
+      bottom: 77px
+      height: 3px
+      width: 272px
+      background-color: $light
+    span
+      letter-spacing: 0
+      display: block
+      margin-top: 33px
+      @include font(300, 55, 67)
+      color: $white
+      text-shadow: 0px 2px 14px $black
+      text-transform: lowercase
+  &__btn
+    position: relative
+    z-index: 2
+    cursor: pointer
+    display: inline-block
+    font-family: 'Montserrat'
+    @include font(600, 24, 29)
+    padding: 20px
+    background-color: #EF8354
+    border-radius: 36px
+    text-transform: uppercase
+    letter-spacing: 0.04em

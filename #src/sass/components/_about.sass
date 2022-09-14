@@ -1,4 +1,4 @@
-.features
+.about
   // background-color: #fff
   // transform: rotate(45deg)
   // clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%)
@@ -7,7 +7,7 @@
   // padding-bottom: 100px
   // overflow: hidden
   position: relative
-  z-index: 3
+  z-index: 2
   &__container
     // transform: skewY(11deg)
     z-index: 2
@@ -22,8 +22,23 @@
     --translation: 0
     padding-left: 60px
     position: relative
-    height: 436px
+    color: $white
+    padding-top: 160px
+    height: 490px
     &::before
+      position: absolute
+      overflow: hidden
+      content: ''
+      top: -142px
+      left: 0
+      bottom: 0
+      right: -120px
+      background: rgba(0,0,0,0.75)
+      height: 120%
+      width: 111.5%
+      z-index: 0
+      transform: skewy(var(--angle))
+    &::after
       content: ""
       position: absolute
       left: 0
@@ -35,13 +50,17 @@
       outline: 1px solid transparent
       backface-visibility: hidden
       // z-index: 3
-      background-color: #fff
+      background: url('../images/bg/about-bg.jpg')
+      background-repeat: no-repeat
+      background-size: cover
+      z-index: -2
     & > .box
+      position: relative
       width: 273px
       height: 0
       padding-bottom: 100%
-      border: 1px solid #fff
-      background: #fff3
+      // border: 1px solid #fff
+      // background: #fff3
       transform: translateY( var(--translation) )
       &:nth-child(1)
         --translation: calc(var(--skew-padding) * 0)
@@ -49,18 +68,28 @@
         --translation: calc(var(--skew-padding) * -0.5)
       &:nth-child(3)
         --translation: calc(var(--skew-padding) * -1)
+      &::before
+        position: absolute
+        content: ''
+        top: -9px
+        left: -16px
+        width: 19px
+        height: 19px
+        border-top: 3px solid rgba(196, 196, 196, 0.5)
+        border-left: 3px solid rgba(196, 196, 196, 0.5)
+      &::after
+        position: absolute
+        content: ''
+        top: 155px
+        right: -4px
+        width: 19px
+        height: 19px
+        border-bottom: 3px solid rgba(196, 196, 196, 0.5)
+        border-right: 3px solid rgba(196, 196, 196, 0.5)
 
-  &__icon
-    width: 50px
-    height: 50px
-    margin: 0 auto
-    margin-bottom: 20px
   &__title
     font-family: 'Montserrat'
     @include font(700, 24, 36)
     margin-bottom: 15px
   &__text
     line-height: 1.5
-    p
-      &:not(:last-child)
-        margin-bottom: 20px

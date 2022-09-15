@@ -6,14 +6,15 @@
   // padding-top: 100px
   // padding-bottom: 100px
   // overflow: hidden
-  position: relative
+  // position: relative
   z-index: 2
   &__container
     // transform: skewY(11deg)
     z-index: 2
     position: relative
     display: flex
-
+  &__head::before
+    top: -17px
   &__boxes
     display: grid
     grid-template-columns: repeat(3, 1fr)
@@ -34,7 +35,7 @@
       bottom: 0
       right: -120px
       background: rgba(0,0,0,0.75)
-      height: 120%
+      height: 113%
       width: 111.5%
       z-index: 0
       transform: skewy(var(--angle))

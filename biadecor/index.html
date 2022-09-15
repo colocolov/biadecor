@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#111111" />
   <!-- <link rel="stylesheet" href="css/adv.css" /> -->
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?ver=1.0.0" />
+  <!-- подключение скриптов -->
+  <!-- <script defer src="js/vendor/swiper-bundle.min.js"></script> -->
+  <script defer src="js/main.min.js"></script>
   <!-- подключение favicon -->
   <link
     rel="icon"
@@ -29,9 +32,11 @@
         <ul class="menu__list">
           <li class="menu__item"><a class="menu__link" href="">Главная</a></li>
           <li class="menu__item">
-            <a class="menu__link" href="">Контакты </a>
+            <a class="menu__link" href="#contacts">Контакты </a>
           </li>
-          <li class="menu__item"><a class="menu__link" href="">О нас</a></li>
+          <li class="menu__item">
+            <a class="menu__link" href="#about">О нас</a>
+          </li>
           <li class="menu__item">
             <a class="menu__link" href="">Каталог тканей</a>
           </li>
@@ -45,17 +50,17 @@
       </button>
     </div>
     <div class="header__social social">
-      <a href="" class="header__phone">
+      <a href="tel:+37378882475" class="header__phone">
         <img class="image" src="images/icons/sprite.svg#phone" alt="" />
       </a>
       <ul class="social__list">
         <li class="social__item">
-          <a href="">
+          <a href="https://instagram.com">
             <img class="image" src="images/icons/sprite.svg#instagram" alt="" />
           </a>
         </li>
         <li class="social__item">
-          <a href="">
+          <a href="https://facebook.com">
             <img class="image" src="images/icons/sprite.svg#facebook" alt="" />
           </a>
         </li>
@@ -135,7 +140,7 @@
   </div>
 </div>
 
-        <div class="diagonal-box bg-two about">
+        <div class="diagonal-box bg-two about" id="about">
   <div class="container about__container">
     <h2 class="header__ver about__head">О нас</h2>
     <div class="about__boxes boxes">
@@ -161,6 +166,47 @@
           <p></p>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+ <div class="contacts" id="contacts">
+  <div class="container contacts__container">
+    <h2 class="header__ver contacts__head">Контакты</h2>
+    <div class="contacts__info">
+      <div class="contacts__socilas">
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <a href="tel:+37378882475" class="contacts__link">
+              <img class="image" src="images/icons/sprite.svg#phone2" alt="" />
+            </a>
+          </li>
+          <li class="contacts__item">
+            <a href="viber://chat?number=%2B37378882475" class="contacts__link">
+              <img class="image" src="images/icons/sprite.svg#viber" alt="" />
+            </a>
+          </li>
+          <li class="contacts__item">
+            <a href="https://facebook.com" class="contacts__link">
+              <img class="image" src="images/icons/sprite.svg#facebook" alt="" />
+            </a>
+          </li>
+          <li class="contacts__item">
+            <a href="https://instagram.com" class="contacts__link">
+              <img class="image" src="images/icons/sprite.svg#instagram" alt="" />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <address class="contacts__adress">
+        str. Grenoble 128 of. 314,<br />
+        mun. Chișinau, MD2048<br />
+        Republica Moldova
+      </address>
+      <address class="contacts__adress">
+        str. Grenoble 128 of. 314,<br />
+        mun. Chișinau, MD2048<br />
+        Republica Moldova
+      </address>
     </div>
   </div>
 </div>

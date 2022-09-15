@@ -462,7 +462,7 @@ input {
 }
 .header__logo {
   height: 59px;
-  margin-right: 203px;
+  margin-right: 197px;
 }
 .header__menu {
   margin-right: 78px;
@@ -490,8 +490,8 @@ input {
 .header__lang > .menu__item:first-child::before {
   content: "";
   position: absolute;
-  right: -4px;
-  top: 0;
+  right: -5px;
+  top: 2px;
   height: 16px;
   width: 2px;
   background-color: #FFFFFF;
@@ -514,8 +514,8 @@ input {
   align-items: center;
 }
 .social__item {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   margin-right: 29px;
 }
 
@@ -593,7 +593,6 @@ input {
 }
 
 .features {
-  position: relative;
   z-index: 3;
 }
 .features__container {
@@ -672,7 +671,6 @@ input {
 }
 
 .about {
-  position: relative;
   z-index: 2;
 }
 .about__container {
@@ -681,6 +679,9 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.about__head::before {
+  top: -17px;
 }
 .about__boxes {
   display: -ms-grid;
@@ -704,7 +705,7 @@ input {
   bottom: 0;
   right: -120px;
   background: rgba(0, 0, 0, 0.75);
-  height: 120%;
+  height: 113%;
   width: 111.5%;
   z-index: 0;
   -webkit-transform: skewy(var(--angle));
@@ -779,6 +780,53 @@ input {
 }
 .about__text {
   line-height: 1.5;
+}
+
+.contacts__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contacts__head::before {
+  content: none;
+}
+.contacts__info {
+  padding-top: 139px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  width: 100%;
+  padding-left: 60px;
+}
+.contacts__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.contacts__item {
+  width: 40px;
+  height: 40px;
+}
+.contacts__item:not(:last-child) {
+  margin-right: 18px;
+}
+.contacts__link img {
+  margin: 0;
+  padding: 0;
+}
+.contacts__adress {
+  line-height: 160%;
+  color: #F6F6F6;
+  font-style: normal;
 }
 
 .menu__body {

@@ -1,10 +1,8 @@
 .box
   &-img
-    // overflow: hidden
-    // transform: skewY(6.5deg)
-    img
-      object-fit: cover
-      // transform: skewY(-6.5deg)
+    margin-top: -2px
+  // &-img-first
+  //   height: 470px
   &-text
     display: flex
     flex-direction: column
@@ -16,6 +14,7 @@
     // color: $text
     margin-bottom: 35px
   &-text
+    position: relative
     @include font(300, 16, 24)
     letter-spacing: 0.06em
     margin-bottom: 37px

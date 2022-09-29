@@ -630,9 +630,8 @@ input {
   font-style: normal;
 }
 
-.box-img img {
-  -o-object-fit: cover;
-  object-fit: cover;
+.box-img {
+  margin-top: -2px;
 }
 .box-text {
   display: -webkit-box;
@@ -653,6 +652,7 @@ input {
   margin-bottom: 35px;
 }
 .box-text {
+  position: relative;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
@@ -760,6 +760,17 @@ input {
 }
 .roller__box {
   margin-bottom: 0;
+}
+.roller__box-first {
+  margin-bottom: 67px;
+}
+.roller__bottom {
+  position: absolute;
+  bottom: -117px;
+  right: 20px;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .roller__btn {
   padding-left: 47px;

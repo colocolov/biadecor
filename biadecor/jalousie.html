@@ -6,9 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#111111" />
   <!-- <link rel="stylesheet" href="css/adv.css" /> -->
+  <!-- <link rel="stylesheet" href="css/swiper-bundle.min.css" /> -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+  />
   <link rel="stylesheet" href="css/style.css?ver=1.0.0" />
   <!-- подключение скриптов -->
-  <!-- <script defer src="js/vendor/swiper-bundle.min.js"></script> -->
+  <script defer src="js/vendor/swiper-bundle.min.js"></script>
   <script defer src="js/main.min.js"></script>
   <!-- подключение favicon -->
   <link
@@ -40,7 +45,7 @@
             <a class="menu__link" href="index.html#about">О нас</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="">Каталог тканей</a>
+            <a class="menu__link" href="fabric.html">Каталог тканей</a>
           </li>
           <li class="menu__item">
             <a class="menu__link" href="jalousie.html">Жалюзи</a>
@@ -82,7 +87,7 @@
 </header>
 
       <main class="main"><!-- roller -->
-<div class="diagonal-box roller">
+<div class="diagonal-box roller roller-roller">
   <div class="container roller__container">
     <h2 class="header__ver header__ver-right roller__head">Рулонные</h2>
     <div class="boxes roller__boxes roller__boxes-first">
@@ -101,8 +106,12 @@
           </p>
         </div>
         <div class="box-btns">
-          <button class="btn btn-reset box-btn">Каталог тканей</button>
-          <button class="btn btn-reset box-btn">Способ ухода</button>
+          <a href="fabric.html#roller" class="btn btn-reset box-btn"
+            >Каталог тканей</a
+          >
+          <button class="btn btn-reset box-btn" data-toggle="modal">
+            Способ ухода
+          </button>
         </div>
         <div class="roller__bottom">
           <button class="roller__btn">
@@ -116,7 +125,7 @@
   </div>
 </div>
 <!-- day-night -->
-<div class="diagonal-box roller">
+<div class="diagonal-box roller roller-day-night">
   <div class="container roller__container">
     <h2 class="header__ver header__ver-right roller__head">день ночь</h2>
     <div class="boxes roller__boxes roller__boxes-nobg">
@@ -135,15 +144,19 @@
           </p>
         </div>
         <div class="box-btns">
-          <button class="btn btn-reset box-btn">Каталог тканей</button>
-          <button class="btn btn-reset box-btn">Способ ухода</button>
+          <a href="fabric.html#day-night" class="btn btn-reset box-btn"
+            >Каталог тканей</a
+          >
+          <button class="btn btn-reset box-btn" data-toggle="modal">
+            Способ ухода
+          </button>
         </div>
       </div>
     </div>
   </div>
 </div>
 <!-- rome -->
-<div class="diagonal-box roller">
+<div class="diagonal-box roller roller-rome">
   <div class="container roller__container">
     <h2 class="header__ver header__ver-right roller__head">римские</h2>
     <div class="boxes roller__boxes">
@@ -161,7 +174,9 @@
           </p>
         </div>
         <div class="box-btns">
-          <button class="btn btn-reset box-btn">Каталог тканей</button>
+          <a href="fabric.html#rome" class="btn btn-reset box-btn"
+            >Каталог тканей</a
+          >
           <button class="btn btn-reset box-btn">Способ ухода</button>
         </div>
       </div>
@@ -169,7 +184,7 @@
   </div>
 </div>
 <!-- wood -->
-<div class="diagonal-box roller">
+<div class="diagonal-box roller roller-wood">
   <div class="container roller__container">
     <h2 class="header__ver header__ver-right roller__head">деревянные</h2>
     <div class="boxes roller__boxes roller__boxes-nobg">
@@ -187,7 +202,9 @@
           </p>
         </div>
         <div class="box-btns">
-          <button class="btn btn-reset box-btn">Каталог тканей</button>
+          <a href="fabric.html#wood" class="btn btn-reset box-btn"
+            >Каталог тканей</a
+          >
           <button class="btn btn-reset box-btn">Способ ухода</button>
         </div>
       </div>
@@ -195,7 +212,7 @@
   </div>
 </div>
 <!-- rollet -->
-<div class="diagonal-box roller">
+<div class="diagonal-box roller roller-rollet">
   <div class="container roller__container">
     <h2 class="header__ver header__ver-right roller__head">роллеты</h2>
     <div class="boxes roller__boxes">
@@ -212,15 +229,17 @@
           </p>
         </div>
         <div class="box-btns">
-          <button class="btn btn-reset box-btn">Каталог тканей</button>
+          <a href="fabric.html#rollet" class="btn btn-reset box-btn"
+            >Каталог тканей</a
+          >
           <button class="btn btn-reset box-btn">Способ ухода</button>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- wood -->
-<div class="diagonal-box roller">
+<!-- setka -->
+<div class="diagonal-box roller roller-setka">
   <div class="container roller__container">
     <h2 class="header__ver header__ver-last roller__head">маскинтная сетка</h2>
     <div class="boxes roller__boxes roller__boxes-nobg">
@@ -237,7 +256,7 @@
           </p>
         </div>
         <div class="box-btns">
-          <button class="btn btn-reset box-btn">Каталог тканей</button>
+          <a href="fabric.html" class="btn btn-reset box-btn">Каталог тканей</a>
           <button class="btn btn-reset box-btn">Способ ухода</button>
         </div>
       </div>
@@ -260,6 +279,57 @@
       <footer class="footer">
   <div class="container"></div>
 </footer>
+ <div class="modal">
+  <div class="modal__inner">
+    <div class="modal__text">
+      <button class="modal__close">
+        <img class="image" src="images/icons/sprite.svg#close" alt="" />
+      </button>
+      <div class="heading modal__title">Способ ухода за жалюзи</div>
+      <div class="modal__descr">
+        <h3>Влажный способ</h3>
+        <p>
+          Неотъемлемым атрибутом современных окон являются жалюзи, защищающие
+          комнату от избыточного солнечного света. Благодаря им, в помещении
+          создается уютная и комфортная обстановка. Сегодня существует много
+          разновидностей такой «защиты от солнца»: горизонтальные и вертикальные
+          жалюзи, фотожалюзи, рулонные и пр. По материалу изготовления они
+          бывают деревянными, тканевыми, пластиковыми и алюминиевыми.
+        </p>
+        <p>
+          Жалюзи просты в эксплуатации, и единственное, что они требуют – чистки
+          по мере загрязнения. Способ очищения устройств напрямую зависит от
+          материала изготовления. Так, самый простой уход – уход за пластиковыми
+          и алюминиевые жалюзи. Их чистка заключается в протирании ламелей
+          влажной губкой или мягкой тряпочкой. Для этого можно использовать
+          раствор моющего средства. Вода используется холодная или теплая. Если
+          ламели загрязнены сильно, то можно вымыть их в ванной. В этом случае
+          на окно они вешаются влажными, после того, как стечет вода. При таком
+          мытье необходимо следить, чтобы не намочить карниз с движущимся
+          механизмом.
+        </p>
+
+        <h3>Сухая чистка</h3>
+        <p>
+          Деревянные жалюзи мыть не стоит, так как под воздействием воды они
+          деформируются, меняют форму и становятся совершенно непригодными. Для
+          того, чтобы очистить деревянные жалюзи, используется сухая тряпка или
+          пылесос. Также можно производить обработку средствами по уходу за
+          нелакированным деревом.
+        </p>
+        <h3>Самостоятельный уход возможен</h3>
+        <p>
+          Чистка тканевых вертикальных жалюзи – самая сложная чистка.
+          Еженедельно такая «защита от солнца» очищается пылесосом. Но хотя бы
+          один раз в год каждая ламель должна быть очищена отдельно. Для этого
+          можно воспользоваться услугой химчистки, но не каждая из этих
+          организаций оказывает подобные услуги.
+        </p>
+      </div>
+    </div>
+    <button class="btn-reset btn modal__btn">Закрыть</button>
+  </div>
+</div>
 
     </div>
   </body>

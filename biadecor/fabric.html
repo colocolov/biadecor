@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#111111" />
+  <!-- <link rel="stylesheet" href="css/adv.css" /> -->
+  <!-- <link rel="stylesheet" href="css/swiper-bundle.min.css" /> -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+  />
+  <link rel="stylesheet" href="css/style.css?ver=1.0.0" />
+  <!-- подключение скриптов -->
+  <script defer src="js/vendor/swiper-bundle.min.js"></script>
+  <script defer src="js/main.min.js"></script>
+  <!-- подключение favicon -->
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="resources/favicon.png"
+  />
+  <title>Каталог тканей</title>
+</head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+  <div class="container header__container">
+    <div class="header__logo">
+      <img class="image" src="images/logo-header.svg" alt="Logo BIADecor" />
+    </div>
+    <div class="header__menu menu">
+      <nav class="menu__body">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="index.html">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="index.html#contacts">Контакты </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="index.html#about">О нас</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="fabric.html">Каталог тканей</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="jalousie.html">Жалюзи</a>
+          </li>
+        </ul>
+      </nav>
+      <button type="button" class="menu__icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="header__social social">
+      <a href="tel:+37378882475" class="header__phone">
+        <img class="image" src="images/icons/sprite.svg#phone" alt="" />
+      </a>
+      <ul class="social__list">
+        <li class="social__item">
+          <a href="https://instagram.com">
+            <img class="image" src="images/icons/sprite.svg#instagram" alt="" />
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="https://facebook.com">
+            <img class="image" src="images/icons/sprite.svg#facebook" alt="" />
+          </a>
+        </li>
+      </ul>
+    </div>
+    <ul class="header__lang">
+      <li class="menu__item current">
+        <a href="">Ru</a>
+      </li>
+      <li class="menu__item">
+        <a href="">Ro</a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+      <main class="main"><!-- roller -->
+<div class="diagonal-box fabric" id="roller">
+  <div class="container fabric__container">
+    <h2 class="header__ver header__ver-right fabric__head">Рулонные</h2>
+    <div class="boxes fabric__boxes fabric__boxes-roller">
+      <!-- СЛАЙДЕР -->
+      <div class="swiper main-slider">
+        <div class="swiper-wrapper">
+          <!-- slide -->
+          <div class="swiper-slide main-slider__slide">
+            <img class="image" src="images/fabric/roller/01.jpg" alt="" />
+          </div>
+          <!-- slide -->
+          <div class="swiper-slide main-slider__slide">
+            <img class="image" src="images/fabric/rome/01.jpg" alt="" />
+          </div>
+          <!-- slide -->
+          <div class="swiper-slide main-slider__slide">
+            <img class="image" src="images/fabric/day-night/01.jpg" alt="" />
+          </div>
+        </div>
+        <!-- срелка -->
+        <div class="main-slider__btn main-slider__btn-prev">
+          <svg class="main-slider__btn-fill" aria-hidden="true">
+            <use xlink:href="images/icons/sprite.svg#arrow-slider"></use>
+          </svg>
+        </div>
+        <!-- срелка -->
+        <div class="main-slider__btn main-slider__btn-next">
+          <svg class="main-slider__btn-fill" aria-hidden="true">
+            <use xlink:href="images/icons/sprite.svg#arrow-slider"></use>
+          </svg>
+        </div>
+      </div>
+      <!-- СЛАЙДЕР -->
+      <div class="roller__bottom fabric__bottom">
+        <button class="roller__btn">
+          <svg class="roller__btn-svg" aria-hidden="true">
+            <use xlink:href="images/icons/sprite.svg#top-dark"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- day-night -->
+<div class="diagonal-box fabric" id="day-night">
+  <div class="container fabric__container">
+    <h2 class="header__ver header__ver-right fabric__head">день ночь</h2>
+    <div class="boxes fabric__boxes">
+      <div class="swiper main-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide main-slider__slide">
+            <img class="image" src="images/fabric/day-night/01.jpg" alt="" />
+          </div>
+          <div class="swiper-slide main-slider__slide">
+            <img class="image" src="images/fabric/roller/01.jpg" alt="" />
+          </div>
+        </div>
+        <div class="main-slider__btn main-slider__btn-prev">
+          <svg class="main-slider__btn-fill" aria-hidden="true">
+            <use xlink:href="images/icons/sprite.svg#arrow-slider"></use>
+          </svg>
+        </div>
+        <div class="main-slider__btn main-slider__btn-next">
+          <svg class="main-slider__btn-fill" aria-hidden="true">
+            <use xlink:href="images/icons/sprite.svg#arrow-slider"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- rome -->
+<div class="diagonal-box fabric" id="rome">
+  <div class="container fabric__container">
+    <h2 class="header__ver header__ver-right fabric__head">римские</h2>
+    <div class="boxes fabric__boxes fabric__boxes-bg fabric__boxes-rome">
+      <!-- СЛАЙДЕР -->
+      <div class="swiper main-slider">
+        <div class="swiper-wrapper">
+          <!-- slide -->
+          <div class="swiper-slide main-slider__slide">
+            <img class="image" src="images/fabric/rome/01.jpg" alt="" />
+          </div>
+          <!-- slide -->
+          <div class="swiper-slide main-slider__slide">
+            <img class="image" src="images/fabric/day-night/01.jpg" alt="" />
+          </div>
+          <!-- slide -->
+          <div class="swiper-slide main-slider__slide">
+            <img class="image" src="images/fabric/roller/01.jpg" alt="" />
+          </div>
+          <!-- slide -->
+        </div>
+        <!-- срелка -->
+        <div class="main-slider__btn main-slider__btn-prev">
+          <svg class="main-slider__btn-fill" aria-hidden="true">
+            <use xlink:href="images/icons/sprite.svg#arrow-slider"></use>
+          </svg>
+        </div>
+        <!-- срелка -->
+        <div class="main-slider__btn main-slider__btn-next">
+          <svg class="main-slider__btn-fill" aria-hidden="true">
+            <use xlink:href="images/icons/sprite.svg#arrow-slider"></use>
+          </svg>
+        </div>
+      </div>
+      <!-- СЛАЙДЕР -->
+    </div>
+  </div>
+</div>
+<!-- wood -->
+<div class="diagonal-box fabric" id="wood">
+  <div class="container fabric__container">
+    <h2 class="header__ver header__ver-right fabric__head">деревянные</h2>
+    <div class="boxes fabric__boxes">
+      <!-- СЛАЙДЕР -->
+      <div class="swiper main-slider">
+        <div class="swiper-wrapper">
+          <!-- slide -->
+          <div class="swiper-slide main-slider__slide">
+            <img class="image" src="images/fabric/wood/01.jpg" alt="" />
+          </div>
+          <!-- slide -->
+          <div class="swiper-slide main-slider__slide">
+            <img class="image" src="images/fabric/day-night/01.jpg" alt="" />
+          </div>
+          <!-- slide -->
+          <div class="swiper-slide main-slider__slide">
+            <img class="image" src="images/fabric/roller/01.jpg" alt="" />
+          </div>
+          <!-- slide -->
+        </div>
+        <!-- срелка -->
+        <div class="main-slider__btn main-slider__btn-prev">
+          <svg class="main-slider__btn-fill" aria-hidden="true">
+            <use xlink:href="images/icons/sprite.svg#arrow-slider"></use>
+          </svg>
+        </div>
+        <!-- срелка -->
+        <div class="main-slider__btn main-slider__btn-next">
+          <svg class="main-slider__btn-fill" aria-hidden="true">
+            <use xlink:href="images/icons/sprite.svg#arrow-slider"></use>
+          </svg>
+        </div>
+      </div>
+      <!-- СЛАЙДЕР -->
+    </div>
+  </div>
+</div>
+<!-- rollet -->
+<div class="diagonal-box fabric" id="rollet">
+  <div class="container fabric__container">
+    <h2 class="header__ver header__ver-last fabric__head">роллеты</h2>
+    <div class="boxes fabric__boxes fabric__boxes-bg fabric__boxes-rollet">
+      <!-- СЛАЙДЕР -->
+      <div class="swiper main-slider">
+        <div class="swiper-wrapper">
+          <!-- slide -->
+          <div class="swiper-slide main-slider__slide">
+            <img class="image" src="images/fabric/rollet/01.jpg" alt="" />
+          </div>
+          <!-- slide -->
+          <div class="swiper-slide main-slider__slide">
+            <img class="image" src="images/fabric/rome/01.jpg" alt="" />
+          </div>
+          <!-- slide -->
+          <div class="swiper-slide main-slider__slide">
+            <img class="image" src="images/fabric/day-night/01.jpg" alt="" />
+          </div>
+          <!-- slide -->
+          <div class="swiper-slide main-slider__slide">
+            <img class="image" src="images/fabric/roller/01.jpg" alt="" />
+          </div>
+          <!-- slide -->
+        </div>
+        <!-- срелка -->
+        <div class="main-slider__btn main-slider__btn-prev">
+          <svg class="main-slider__btn-fill" aria-hidden="true">
+            <use xlink:href="images/icons/sprite.svg#arrow-slider"></use>
+          </svg>
+        </div>
+        <!-- срелка -->
+        <div class="main-slider__btn main-slider__btn-next">
+          <svg class="main-slider__btn-fill" aria-hidden="true">
+            <use xlink:href="images/icons/sprite.svg#arrow-slider"></use>
+          </svg>
+        </div>
+      </div>
+      <!-- СЛАЙДЕР -->
+    </div>
+  </div>
+</div>
+<!-- / -->
+<!-- ads -->
+<div class="diagonal-box fabric">
+  <div class="container fabric__container">
+    <div class="roller__top">
+      <button class="roller__btn">
+        <svg class="roller__btn-svg" aria-hidden="true">
+          <use xlink:href="images/icons/sprite.svg#top-dark"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="boxes roller__boxes fabric__boxes-last">UX-Reformed&nbsp;©</div>
+  </div>
+</div>
+</main>
+      <footer class="footer">
+  <div class="container"></div>
+</footer>
+
+    </div>
+  </body>
+</html>

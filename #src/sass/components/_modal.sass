@@ -1,0 +1,71 @@
+.modal
+  position: fixed
+  inset: 0
+  height: 100%
+  width: 100%
+  overflow-x: hidden
+  overflow-y: auto
+  // padding-top: 240px
+  // padding-bottom: 40px
+  z-index: 100
+  // display: none
+  visibility: hidden
+  opacity: 0
+  transition: all 0.3s linear
+  color: $light
+  &._active
+    visibility: visible
+    opacity: 1
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    background-color: rgba(darken($bgc, 25%), 0.95)
+  &__inner
+    position: fixed
+    top: 50%
+    left: 50%
+    width: 850px
+    transform: translate(-50%, -50%)
+    background: rgba($bgc, 0.8)
+    border-radius: 50px
+    padding: 60px 50px
+    height: 90vh
+    overflow-y: auto
+    &::-webkit-scrollbar
+      width: 0
+  &__close
+    position: absolute
+    top: 22px
+    right: 22px
+    width: 42px
+    height: 42px
+    background: none
+    border-radius: 50%
+    padding: 7px
+    border: 2px solid $light
+    cursor: pointer
+    transition: all 0.3s linear
+  &__title
+    text-align: center
+    @include font(400, 32, 36)
+    margin-bottom: 30px
+  &__descr
+    // font-family: 'IkraSlab'
+    @include font(400, 18, 22)
+    // max-width: 520px
+    margin: 0 auto
+    margin-bottom: 60px
+    h3
+      @include font(500, 22, 22)
+      text-align: center
+      margin-bottom: 15px
+      margin-top: 25px
+    p
+      margin-bottom: 15px
+      font-family: "Montserrat", sans-serif
+  &.active
+    display: block

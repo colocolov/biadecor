@@ -1,1 +1,56 @@
 @media ( max-width:992px )
+  .menu__item::before
+    content: none
+  .header__social
+    display: none
+  .first
+    clip-path: none
+  .first__container
+    padding-top: 15%
+    padding-bottom: 15%
+  .features__container,
+  .about__container,
+  .contacts__container
+    flex-direction: column
+  .header__ver
+    writing-mode: unset
+    transform: rotate(0)
+    padding: 5% 0
+    text-align: center
+    &::before
+      content: none
+  .features__boxes,
+  .about__boxes
+    padding: 50px
+    height: auto
+    &::before
+      z-index: -1
+      right: -15px
+      left: -15px
+      top: 0
+      bottom: 0
+      transform: skew(0)
+      transform-origin: center
+  .about__boxes
+    &::after
+      z-index: -2
+      right: -15px
+      left: -15px
+      top: 0
+      transform: skew(0)
+      transform-origin: center
+  .features__boxes > .box,
+  .about__boxes > .box
+    text-align: center
+    transform: translateY(0)
+    height: auto
+    padding-bottom: 0
+    width: 100%
+  .contacts__info
+    padding: 25px 15px
+
+@media ( max-width:842px )
+  .features__boxes,
+  .about__boxes
+    padding: 50px 35px
+

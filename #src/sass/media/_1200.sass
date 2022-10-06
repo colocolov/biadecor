@@ -1,1 +1,53 @@
 @media ( max-width:1200px )
+  .first
+    clip-path: polygon(0 0, 100% 0, 100% 74%, 0% 100%)
+  .header__ver
+    padding: 120px 10px 120px 50px
+    &::before
+      top: 8px
+  .about__head::before
+    top: -11px
+  .header__logo
+    margin-right: 165px
+  .about__boxes,
+  .features__boxes
+    grid-gap: 55px
+  .about__boxes::before
+    bottom: 72px
+  .contacts__head
+    padding: 80px 10px 80px 50px
+  .contacts__info
+    padding-right: 60px
+
+@media ( max-width:1150px )
+  .header__logo
+    margin-right: 90px
+  .about__boxes,
+  .features__boxes
+    grid-gap: 40px
+
+@media ( max-width:1100px )
+  .header__container
+    justify-content: space-between
+  .menu__item:not(:last-child)
+    margin-right: 50px
+  .first__container
+    padding-left: 15%
+  .about__boxes::before
+    bottom: 68px
+
+@media ( max-width:1050px )
+  .first
+    clip-path: polygon(0 0, 100% 0, 100% 78%, 0% 100%)
+  .header__menu,
+  .header__logo
+    margin-right: 0
+  .features__boxes > .box,
+  .about__boxes > .box
+    width: 248px
+  .about__boxes,
+  .features__boxes
+    grid-gap: 35px
+  .about__boxes::before
+    bottom: 62px
+

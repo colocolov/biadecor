@@ -3,13 +3,14 @@
     // padding-bottom: 139px
     display: flex
   &__head
+    padding: 70px 0 110px 105px
     &::before
       content: none
   &__info
-    padding-top: 139px
+    padding-top: 50px
     display: flex
     justify-content: space-between
-    align-items: flex-start
+    align-items: center
     width: 100%
     padding-left: 60px
   &__list
@@ -22,9 +23,21 @@
       margin-right: 18px
   &__link
     img
+      transition: all 0.3s linear
       margin: 0
       padding: 0
   &__adress
+    position: relative
     line-height: 160%
     color: #F6F6F6
     font-style: normal
+    transition: all 0.3s linear
+    &::before
+      position: absolute
+      content: ''
+      display: inline-block
+      bottom: -6px
+      width: 0%
+      height: 2px
+      background-color: $white
+      transition: 0.5s

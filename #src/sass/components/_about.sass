@@ -1,15 +1,6 @@
 .about
-  // background-color: #fff
-  // transform: rotate(45deg)
-  // clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%)
-  // transform: skewY(-11deg)
-  // padding-top: 100px
-  // padding-bottom: 100px
-  // overflow: hidden
-  // position: relative
   z-index: 2
   &__container
-    // transform: skewY(11deg)
     z-index: 2
     position: relative
     display: flex
@@ -19,7 +10,6 @@
     display: grid
     grid-template-columns: repeat(3, 1fr)
     grid-gap: 80px
-    // margin: 2em 0
     --translation: 0
     padding-left: 60px
     position: relative
@@ -50,7 +40,6 @@
       transform-origin: -1px 0
       outline: 1px solid transparent
       backface-visibility: hidden
-      // z-index: 3
       background: url('../images/bg/about-bg.jpg')
       background-repeat: no-repeat
       background-size: cover
@@ -60,8 +49,6 @@
       width: 273px
       height: 0
       padding-bottom: 100%
-      // border: 1px solid #fff
-      // background: #fff3
       transform: translateY( var(--translation) )
       &:nth-child(1)
         --translation: calc(var(--skew-padding) * 0)

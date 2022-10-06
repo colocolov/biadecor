@@ -52,7 +52,7 @@
       height: 128px
       align-items: flex-end
       padding-left: 30px
-      margin-left: 66px
+      margin-left: 53px
       span
     & > .box
       width: 273px
@@ -66,25 +66,37 @@
     &-first
       margin-bottom: 67px
 
+  &__top
+    width: 76px
+    height: 76px
+    border-radius: 50%
+    border: 4px solid $text
+    flex-shrink: 0
+    cursor: pointer
+    // z-index: 20
+    & .roller__btn
+      cursor: pointer
+
   &__bottom
     position: absolute
     bottom: -117px
     right: 20px
     transform: rotate(180deg)
+    width: 76px
+    height: 76px
+    border-radius: 50%
+    border: 4px solid $text
 
   &__btn
-    padding-left: 47px
-    margin-left: -66px
+    margin-left: 2px
     background: none
     outline: none
     border: none
+    // padding: 10px
     &-svg
-      padding: 10px
-      width: 76px
-      height: 76px
+      width: 50px
+      height: 50px
       fill: $text
-      border: 4px solid $text
-      border-radius: 50%
 
   &__title
     font-family: 'Montserrat'
@@ -99,14 +111,12 @@
   &-roller
     z-index: 10
   &-day-night
-    z-index: 11
-    & .box-btns
-      z-index: 40
+    z-index: 54
   &-rome
-    z-index: 12
+    z-index: 44
   &-wood
-    z-index: 13
+    z-index: 34
   &-rollet
-    z-index: 14
+    z-index: 24
   &-setka
     z-index: 15

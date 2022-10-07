@@ -1325,8 +1325,8 @@ input {
   .first__btn:hover {
     padding: 20px 40px;
     background-color: #ed723d;
-    -webkit-filter: drop-shadow(px 6px 11px rgba(45, 49, 66, 0.7));
-    filter: drop-shadow(px 6px 11px rgba(45, 49, 66, 0.7));
+    -webkit-filter: drop-shadow(0px 6px 11px rgba(45, 49, 66, 0.7));
+    filter: drop-shadow(0px 6px 11px rgba(45, 49, 66, 0.7));
   }
   .contacts__item:hover img {
     -webkit-transform: scale(1.1);

@@ -5,7 +5,7 @@ const iconMenu = document.querySelector(".menu__icon");
 const menuBody = document.querySelector(".menu__body");
 const menuLink = document.querySelectorAll(".menu__item");
 
-const menuLang = document.querySelector(".header__lang");
+// const menuLang = document.querySelector(".header__lang");
 
 if (iconMenu) {
   iconMenu.addEventListener("click", function (e) {
@@ -13,10 +13,10 @@ if (iconMenu) {
     iconMenu.classList.toggle("_active");
     menuBody.classList.toggle("_active");
 
-    const div = document.createElement("div");
-    div.classList.add("header__social");
-    div.innerHTML = menuLang.textContent;
-    menuBody.append(div);
+    // const div = document.createElement("div");
+    // div.classList.add("header__social");
+    // div.innerHTML = menuLang.textContent;
+    // menuBody.append(div);
   });
 }
 // закрытие при клике

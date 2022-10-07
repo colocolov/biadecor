@@ -2,6 +2,11 @@ const modal = document.querySelector(".modal");
 const modalBtn = document.querySelectorAll("[data-toggle=modal]");
 const modalCloseBtn = document.querySelector(".modal__close");
 
+function removeActive() {
+  modal.classList.remove("_active");
+  document.body.classList.remove("_lock");
+}
+
 if (modal) {
   modal.addEventListener("click", (e) => {
     const isModal = e.target.closest(".modal__inner");
@@ -18,11 +23,6 @@ if (modal) {
   });
 
   modalCloseBtn.addEventListener("click", removeActive);
-
-  function removeActive() {
-    modal.classList.remove("_active");
-    document.body.classList.remove("_lock");
-  }
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" || e.code === "Escape") {

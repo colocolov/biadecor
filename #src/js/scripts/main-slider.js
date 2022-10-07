@@ -13,19 +13,6 @@ const headerSlider = new Swiper(".main-slider", {
   //   crossFade: true,
   // },
   // переключение при клике на слайд
-  // slideToClickedSlide: true,
-  // // отключение прокрутки при наведении мыши
-  // on: {
-  //   init() {
-  //     this.el.addEventListener("mouseenter", () => {
-  //       this.autoplay.stop();
-  //     });
-
-  //     this.el.addEventListener("mouseleave", () => {
-  //       this.autoplay.start();
-  //     });
-  //   },
-  // },
-  //
+  slideToClickedSlide: true,
 });
 //----- END

@@ -13,6 +13,59 @@
     filter: drop-shadow(5px 0px 15px rgba($black, 0.7))
     &__container
       padding: 0 30px
+    &__lang
+      justify-content: flex-end
+      margin-top: 25px
+      & .menu__item
+        margin-bottom: 0
+        margin-left: 20px
+    &__social
+      display: flex
+      margin-top: 50px
+      justify-content: flex-end
+    &__phone
+      // margin-right: 0
+      height: 50px
+      width: 50px
+  .header__lang > .menu__item:first-child::before
+    content: none
+  .menu__item.current
+    color: lighten($text, 15%)
+  .social__item
+    margin-right: 0
+    margin-left: 30px
+    width: 50px
+    height: 50px
 
-  .header__lang
-    display: none
+    &__logo
+      height: 40px
+      z-index: 10
+
+  .first__head
+    font-size: 45px
+    span
+      font-size: 35px
+    &::after
+      bottom: 55px
+  .first__container
+    padding-left: 7%
+    padding-top: 25%
+
+  .features__boxes,
+  .about__boxes
+    grid-template-columns: 1fr
+
+  .about__boxes > .box
+    &::before,
+    &::after
+      content: none
+
+  .contacts
+    &__info
+      flex-direction: column-reverse
+      justify-content: center
+    &__phone
+      margin-bottom: 15px
+
+
+

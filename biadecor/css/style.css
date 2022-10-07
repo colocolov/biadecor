@@ -1612,6 +1612,9 @@ input {
   .header__container {
     padding: 0 30px;
   }
+  .header__logo {
+    height: 40px;
+  }
   .header__lang {
     -webkit-box-pack: end;
     -ms-flex-pack: end;

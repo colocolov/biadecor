@@ -690,7 +690,7 @@ input {
   line-height: 1.5;
   margin-bottom: 35px;
 }
-.box-text {
+.box-descr {
   position: relative;
   font-weight: 300;
   font-size: 16px;
@@ -814,14 +814,15 @@ input {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   cursor: pointer;
+  margin-top: 5px;
 }
 .roller__top .roller__btn {
   cursor: pointer;
 }
 .roller__bottom {
   position: absolute;
-  bottom: -117px;
-  right: 20px;
+  bottom: -75px;
+  right: 0;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
@@ -1430,6 +1431,9 @@ input {
   .header__ver {
     padding: 120px 0px 120px 74px;
   }
+  .roller__boxes-last {
+    margin-left: 26px;
+  }
 }
 @media (max-width: 1200px) {
   .first {
@@ -1446,7 +1450,10 @@ input {
     top: -11px;
   }
   .header__logo {
-    margin-right: 165px;
+    margin-right: 150px;
+  }
+  .menu__item:not(:last-child) {
+    margin-right: 58px;
   }
   .about__boxes,
 .features__boxes {
@@ -1461,6 +1468,18 @@ input {
   .contacts__info {
     padding-right: 60px;
   }
+  .roller__boxes {
+    -ms-grid-columns: 56% 39%;
+    grid-template-columns: 56% 39%;
+  }
+  .roller__boxes-last {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .roller__boxes-last {
+    margin-left: 13px;
+  }
 }
 @media (max-width: 1150px) {
   .header__logo {
@@ -1469,6 +1488,16 @@ input {
   .about__boxes,
 .features__boxes {
     grid-gap: 40px;
+  }
+  .roller__boxes {
+    grid-gap: 35px;
+    height: 462px;
+  }
+  .roller__boxes-last {
+    height: auto;
+  }
+  .header__ver {
+    padding: 81px 10px 81px 50px;
   }
 }
 @media (max-width: 1100px) {
@@ -1485,6 +1514,12 @@ input {
   }
   .about__boxes::before {
     bottom: 68px;
+  }
+  .roller__boxes {
+    height: 462px;
+  }
+  .roller__boxes-last {
+    height: auto;
   }
 }
 @media (max-width: 1050px) {
@@ -1507,10 +1542,36 @@ input {
   .about__boxes::before {
     bottom: 62px;
   }
+  .roller__boxes {
+    height: 400px;
+    -ms-grid-columns: 48% 48%;
+    grid-template-columns: 48% 48%;
+  }
+  .box-title {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+  .box-descr {
+    margin-bottom: 24px;
+  }
+  .roller__bottom {
+    bottom: -37px;
+  }
+  .roller__boxes-last {
+    height: auto;
+  }
 }
 @media (max-width: 992px) {
   .menu__item::before {
     content: none;
+  }
+  .header {
+    position: fixed;
+    -webkit-filter: drop-shadow(5px 0px 15px rgba(0, 0, 0, 0.7));
+    filter: drop-shadow(5px 0px 15px rgba(0, 0, 0, 0.7));
+    background-color: rgba(79, 93, 117, 0.9);
+    z-index: 150;
+    width: 100%;
   }
   .header__social {
     display: none;
@@ -1532,6 +1593,7 @@ input {
     flex-direction: column;
   }
   .header__ver {
+    margin-top: 2px;
     -webkit-writing-mode: unset;
     -ms-writing-mode: unset;
     writing-mode: unset;
@@ -1587,6 +1649,61 @@ input {
   }
   .contacts__info {
     padding: 25px 15px;
+  }
+  .roller-roller {
+    margin-top: 95px;
+  }
+  .roller__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .roller__boxes {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    padding-bottom: 0;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .roller__boxes img {
+    margin-left: -15px;
+  }
+  .roller__boxes::before {
+    -webkit-transform: skew(0);
+    -ms-transform: skew(0);
+    transform: skew(0);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    right: -15px;
+    left: -15px;
+  }
+  .roller__box-first {
+    margin-bottom: 0;
+  }
+  .roller__bottom {
+    display: none;
+  }
+  .box-img {
+    margin-top: 0;
+    height: 100%;
+  }
+  .roller__box {
+    margin-bottom: 20px;
+  }
+  .box-btn {
+    width: 175px;
+    padding: 10px 27px;
+    text-align: center;
+  }
+  .roller__boxes-last {
+    padding: 15px 0;
+    margin-left: 0;
+  }
+  .roller__top {
+    display: none;
   }
 }
 @media (max-width: 842px) {

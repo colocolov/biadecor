@@ -8,7 +8,9 @@
   .about__head::before
     top: -11px
   .header__logo
-    margin-right: 165px
+    margin-right: 150px
+  .menu__item:not(:last-child)
+    margin-right: 58px
   .about__boxes,
   .features__boxes
     grid-gap: 55px
@@ -18,6 +20,13 @@
     padding: 80px 10px 80px 50px
   .contacts__info
     padding-right: 60px
+  .roller__boxes
+    grid-template-columns: 56% 39%
+  .roller__boxes-last
+    grid-template-columns: 1fr
+    width: 100%
+  .roller__boxes-last
+    margin-left: 13px
 
 @media ( max-width:1150px )
   .header__logo
@@ -25,6 +34,13 @@
   .about__boxes,
   .features__boxes
     grid-gap: 40px
+  .roller__boxes
+    grid-gap: 35px
+    height: 462px
+  .roller__boxes-last
+    height: auto
+  .header__ver
+    padding: 81px 10px 81px 50px
 
 @media ( max-width:1100px )
   .header__container
@@ -35,6 +51,10 @@
     padding-left: 15%
   .about__boxes::before
     bottom: 68px
+  .roller__boxes
+    height: 462px
+  .roller__boxes-last
+    height: auto
 
 @media ( max-width:1050px )
   .first
@@ -50,4 +70,16 @@
     grid-gap: 35px
   .about__boxes::before
     bottom: 62px
+  .roller__boxes
+    height: 400px
+    grid-template-columns: 48% 48%
+  .box-title
+    font-size: 32px
+    margin-bottom: 24px
+  .box-descr
+    margin-bottom: 24px
+  .roller__bottom
+    bottom: -37px
+  .roller__boxes-last
+    height: auto
 

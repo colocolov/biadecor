@@ -1,6 +1,12 @@
 @media ( max-width:992px )
   .menu__item::before
     content: none
+  .header
+    position: fixed
+    filter: drop-shadow(5px 0px 15px rgba(0, 0, 0, 0.7))
+    background-color: rgba($bgc, 0.9)
+    z-index: 150
+    width: 100%
   .header__social
     display: none
   .first
@@ -13,6 +19,7 @@
   .contacts__container
     flex-direction: column
   .header__ver
+    margin-top: 2px
     writing-mode: unset
     transform: rotate(0)
     padding: 5% 0
@@ -49,6 +56,45 @@
   .contacts__info
     padding: 25px 15px
 
+  .roller-roller
+    margin-top: 95px
+  .roller__container
+    flex-direction: column
+  .roller__boxes
+    align-items: flex-end
+    padding-bottom: 0
+    grid-template-columns: repeat(2, 1fr)
+    img
+      margin-left: -15px
+  .roller__boxes::before
+    transform: skew(0)
+    transform-origin: center
+    right: -15px
+    left: -15px
+  .roller__box-first
+    margin-bottom: 0
+  .roller__bottom
+    display: none
+  .box-img
+    margin-top: 0
+    height: 100%
+    // margin-left: -15px
+  .roller__box
+    margin-bottom: 20px
+  .box-btn
+    width: 175px
+    padding: 10px 27px
+    text-align: center
+  .roller__boxes-last
+    padding: 15px 0
+    margin-left: 0
+  .roller__top
+    display: none
+
+
+
+//
+//
 @media ( max-width:842px )
   .features__boxes,
   .about__boxes

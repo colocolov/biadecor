@@ -1910,8 +1910,8 @@ input {
   .roller__boxes {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    -ms-grid-rows: 350px, 1fr;
-    grid-template-rows: 350px, 1fr;
+    -ms-grid-rows: 350px 1fr;
+    grid-template-rows: 350px 1fr;
     grid-gap: 20px;
   }
   .box-img {
@@ -1920,6 +1920,10 @@ input {
   }
   .box-text {
     padding-top: 0;
+  }
+  .roller__boxes-last {
+    -ms-grid-rows: 1fr;
+    grid-template-rows: 1fr;
   }
   .fabric__boxes {
     height: 350px;
@@ -1943,9 +1947,13 @@ input {
     font-size: 18px;
   }
   .roller__boxes {
-    -ms-grid-rows: 250px, 1fr;
-    grid-template-rows: 250px, 1fr;
+    -ms-grid-rows: 250px 1fr;
+    grid-template-rows: 250px 1fr;
     grid-gap: 20px;
+  }
+  .roller__boxes-last {
+    -ms-grid-rows: 1fr;
+    grid-template-rows: 1fr;
   }
   .box-img {
     height: 250px;

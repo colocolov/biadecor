@@ -56,14 +56,18 @@
   .contacts__info
     padding: 25px 15px
 
-  .roller-roller
+  .roller-roller,
+  .fabric
     margin-top: 95px
-  .roller__container
+  .roller__container,
+  .fabric__container
     flex-direction: column
   .roller__boxes
     align-items: flex-end
     padding-bottom: 0
     grid-template-columns: repeat(2, 1fr)
+    height: auto
+    min-height: 420px
     img
       margin-left: -15px
   .roller__boxes::before
@@ -85,13 +89,36 @@
     width: 175px
     padding: 10px 27px
     text-align: center
-  .roller__boxes-last
+  .roller__boxes-last,
+  .fabric__boxes-last
     padding: 15px 0
     margin-left: 0
   .roller__top
     display: none
+  .roller__boxes-last,
+  .fabric__boxes-last
+    min-height: auto
 
+  .modal__inner
+    height: 80vh
+    transform: translateX(-50%)
+    top: 120px
 
+  .fabric__boxes-roller::before
+    bottom: 0
+    left: -15px
+    top: 0
+    right: -15px
+    background: url(../images/fabric/roller/01.jpg) center/cover no-repeat
+  .fabric__boxes
+    align-items: center
+    padding-left: 0
+  .fabric__boxes::before,
+  .fabric__boxes-bg::after
+    transform: skew(0)
+    transform-origin: center
+    right: -15px
+    left: -15px
 
 //
 //

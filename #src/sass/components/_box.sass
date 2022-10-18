@@ -23,12 +23,56 @@
     align-items: center
     justify-content: space-between
   &-btn
+    position: relative
     font-family: 'Montserrat'
     @include font(600, 14, 21)
     letter-spacing: 0.01em
     color: $light
     width: 188px
     transition: all 0.3s linear
+    text-align: center
+  &-content
+    position: absolute
+    bottom: 40px
+    left: 0
+    height: auto
+    width: 370px
+    background-color: $light
+    padding: 25px
+    border-radius: 4px
+    opacity: 0
+    visibility: hidden
+    transform: translateX(-50%) translateY(-50px)
+    transition: all 0.5s ease
+    color: $text
+    filter: drop-shadow(0 0 0.75rem rgba($black, 0.35))
+    text-align: left
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 75%
+      width: 20px
+      height: 20px
+      background-color: $light
+      transform: rotate(45deg)
+    &__close
+      position: absolute
+      top: 12px
+      right: 12px
+      width: 18px
+      height: 18px
+      background: none
+      border-radius: 50%
+      padding: 3px
+      border: 1px solid $bgc
+      cursor: pointer
+      transition: all 0.3s linear
+    &.active
+      opacity: 1
+      visibility: visible
+      transform: translateX(-50%) translateY(-25px)
+
 
 
 

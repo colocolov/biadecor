@@ -1205,6 +1205,9 @@ input {
 .menu__item.current {
   color: #2D3142;
 }
+.menu__item.active::before {
+  width: 100%;
+}
 @media (max-width: 768px) {
   .menu__item {
     margin-bottom: 40px;
@@ -1532,7 +1535,8 @@ input {
     -ms-grid-columns: 56% 39%;
     grid-template-columns: 56% 39%;
   }
-  .roller__boxes-last {
+  .roller__boxes-last,
+.fabric__boxes-last {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     width: 100%;
@@ -1631,11 +1635,12 @@ input {
 .fabric__boxes-last {
     height: auto;
   }
+  .fabric__boxes-last {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
 }
 @media (max-width: 992px) {
-  .menu__item::before {
-    content: none;
-  }
   .header {
     position: fixed;
     -webkit-filter: drop-shadow(5px 0px 15px rgba(0, 0, 0, 0.7));
@@ -1721,9 +1726,14 @@ input {
   .contacts__info {
     padding: 25px 15px;
   }
-  .roller-roller,
-.fabric {
+  .roller-roller {
     margin-top: 95px;
+  }
+  .fabric {
+    margin-top: 50px;
+  }
+  .fabric-first {
+    margin-top: 100px;
   }
   .roller__container,
 .fabric__container {
@@ -1795,7 +1805,7 @@ input {
     left: -15px;
     top: 0;
     right: -15px;
-    background: url(../images/fabric/roller/01.jpg) center/cover no-repeat;
+    background: url(../images/works/roller/01.jpg) center/cover no-repeat;
   }
   .fabric__boxes {
     -webkit-box-align: center;
@@ -1864,6 +1874,9 @@ input {
   .header__phone {
     height: 50px;
     width: 50px;
+  }
+  .header__ver {
+    padding-bottom: 20px;
   }
   .header__lang > .menu__item:first-child::before {
     content: none;
@@ -1969,6 +1982,9 @@ input {
     width: 85%;
     height: 330px;
   }
+  .main-slider__slide {
+    height: auto;
+  }
 }
 @media (max-width: 576px) {
   .roller__boxes {
@@ -1991,7 +2007,8 @@ input {
   .box-content::after {
     left: 50%;
   }
-  .roller__boxes-last {
+  .roller__boxes-last,
+.fabric__boxes-last {
     -ms-grid-rows: 1fr;
     grid-template-rows: 1fr;
   }
@@ -2021,7 +2038,8 @@ input {
     grid-template-rows: 250px 1fr;
     grid-gap: 20px;
   }
-  .roller__boxes-last {
+  .roller__boxes-last,
+.fabric__boxes-last {
     -ms-grid-rows: 1fr;
     grid-template-rows: 1fr;
   }

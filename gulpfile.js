@@ -98,7 +98,7 @@ function htmlBuild() {
       })
     )
     .pipe(replace(/@img\//g, "images/"))
-    .pipe(webphtml())
+    // .pipe(webphtml())
     .pipe(
       htmlmin({
         // collapseWhitespace: true, // удаляем все переносы
@@ -338,7 +338,7 @@ let done = gulp.series(
   cleanDist,
   gulp.parallel(
     cssBuild,
-    cssAdd,
+    // cssAdd,
     htmlBuild,
     jsBuild,
     jsAdd,

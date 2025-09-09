@@ -1,0 +1,289 @@
+"use strict";
+
+function DynamicAdapt(type) {
+  this.type = type;
+}
+
+DynamicAdapt.prototype.init = function () {
+  const _this = this;
+  // массив объектов
+  this.оbjects = [];
+  this.daClassname = "_dynamic_adapt_";
+  // массив DOM-элементов
+  this.nodes = document.querySelectorAll("[data-da]");
+
+  // наполнение оbjects объктами
+  for (let i = 0; i < this.nodes.length; i++) {
+    const node = this.nodes[i];
+    const data = node.dataset.da.trim();
+    const dataArray = data.split(",");
+    const оbject = {};
+    оbject.element = node;
+    оbject.parent = node.parentNode;
+    оbject.destination = document.querySelector(dataArray[0].trim());
+    оbject.breakpoint = dataArray[1] ? dataArray[1].trim() : "767";
+    оbject.place = dataArray[2] ? dataArray[2].trim() : "last";
+    оbject.index = this.indexInParent(оbject.parent, оbject.element);
+    this.оbjects.push(оbject);
+  }
+
+  this.arraySort(this.оbjects);
+
+  // массив уникальных медиа-запросов
+  this.mediaQueries = Array.prototype.map.call(
+    this.оbjects,
+    function (item) {
+      return (
+        "(" +
+        this.type +
+        "-width: " +
+        item.breakpoint +
+        "px)," +
+        item.breakpoint
+      );
+    },
+    this
+  );
+  this.mediaQueries = Array.prototype.filter.call(
+    this.mediaQueries,
+    function (item, index, self) {
+      return Array.prototype.indexOf.call(self, item) === index;
+    }
+  );
+
+  // навешивание слушателя на медиа-запрос
+  // и вызов обработчика при первом запуске
+  for (let i = 0; i < this.mediaQueries.length; i++) {
+    const media = this.mediaQueries[i];
+    const mediaSplit = String.prototype.split.call(media, ",");
+    const matchMedia = window.matchMedia(mediaSplit[0]);
+    const mediaBreakpoint = mediaSplit[1];
+
+    // массив объектов с подходящим брейкпоинтом
+    const оbjectsFilter = Array.prototype.filter.call(
+      this.оbjects,
+      function (item) {
+        return item.breakpoint === mediaBreakpoint;
+      }
+    );
+    matchMedia.addListener(function () {
+      _this.mediaHandler(matchMedia, оbjectsFilter);
+    });
+    this.mediaHandler(matchMedia, оbjectsFilter);
+  }
+};
+
+DynamicAdapt.prototype.mediaHandler = function (matchMedia, оbjects) {
+  if (matchMedia.matches) {
+    for (let i = 0; i < оbjects.length; i++) {
+      const оbject = оbjects[i];
+      оbject.index = this.indexInParent(оbject.parent, оbject.element);
+      this.moveTo(оbject.place, оbject.element, оbject.destination);
+    }
+  } else {
+    for (let i = 0; i < оbjects.length; i++) {
+      const оbject = оbjects[i];
+      if (оbject.element.classList.contains(this.daClassname)) {
+        this.moveBack(оbject.parent, оbject.element, оbject.index);
+      }
+    }
+  }
+};
+
+// Функция перемещения
+DynamicAdapt.prototype.moveTo = function (place, element, destination) {
+  element.classList.add(this.daClassname);
+  if (place === "last" || place >= destination.children.length) {
+    destination.insertAdjacentElement("beforeend", element);
+    return;
+  }
+  if (place === "first") {
+    destination.insertAdjacentElement("afterbegin", element);
+    return;
+  }
+  destination.children[place].insertAdjacentElement("beforebegin", element);
+};
+
+// Функция возврата
+DynamicAdapt.prototype.moveBack = function (parent, element, index) {
+  element.classList.remove(this.daClassname);
+  if (parent.children[index] !== undefined) {
+    parent.children[index].insertAdjacentElement("beforebegin", element);
+  } else {
+    parent.insertAdjacentElement("beforeend", element);
+  }
+};
+
+// Функция получения индекса внутри родителя
+DynamicAdapt.prototype.indexInParent = function (parent, element) {
+  const array = Array.prototype.slice.call(parent.children);
+  return Array.prototype.indexOf.call(array, element);
+};
+
+// Функция сортировки массива по breakpoint и place
+// по возрастанию для this.type = min
+// по убыванию для this.type = max
+DynamicAdapt.prototype.arraySort = function (arr) {
+  if (this.type === "min") {
+    Array.prototype.sort.call(arr, function (a, b) {
+      if (a.breakpoint === b.breakpoint) {
+        if (a.place === b.place) {
+          return 0;
+        }
+
+        if (a.place === "first" || b.place === "last") {
+          return -1;
+        }
+
+        if (a.place === "last" || b.place === "first") {
+          return 1;
+        }
+
+        return a.place - b.place;
+      }
+
+      return a.breakpoint - b.breakpoint;
+    });
+  } else {
+    Array.prototype.sort.call(arr, function (a, b) {
+      if (a.breakpoint === b.breakpoint) {
+        if (a.place === b.place) {
+          return 0;
+        }
+
+        if (a.place === "first" || b.place === "last") {
+          return 1;
+        }
+
+        if (a.place === "last" || b.place === "first") {
+          return -1;
+        }
+
+        return b.place - a.place;
+      }
+
+      return b.breakpoint - a.breakpoint;
+    });
+    return;
+  }
+};
+
+const da = new DynamicAdapt("max");
+da.init();
+
+// слайдер на главной
+const headerSlider = new Swiper(".main-slider", {
+  // speed: 800,
+  loop: true,
+  navigation: {
+    nextEl: ".main-slider__btn-next",
+    prevEl: ".main-slider__btn-prev",
+    clickable: true,
+  },
+  //эффект перехода слайда (только если показ по 1-му слайду)
+  // effect: "fade",
+  // fadeEffect: {
+  //   crossFade: true,
+  // },
+  // переключение при клике на слайд
+  slideToClickedSlide: true,
+});
+//----- END
+
+// modal
+const modal = document.querySelector(".modal");
+const modalBtn = document.querySelectorAll("[data-toggle=modal]");
+const modalCloseBtn = document.querySelector(".modal__close");
+// tooltip
+const tooltipBtn = document.querySelectorAll(".box-btn");
+const tooltipContent = document.querySelectorAll(".box-content");
+const tooltipCloseBtn = document.querySelectorAll(".box-content__close");
+
+// modal
+function removeActive() {
+  modal.classList.remove("_active");
+  document.body.classList.remove("_lock");
+}
+
+if (modal) {
+  modal.addEventListener("click", (e) => {
+    const isModal = e.target.closest(".modal__inner");
+    if (!isModal) {
+      removeActive();
+    }
+  });
+
+  modalBtn.forEach((el) => {
+    el.addEventListener("click", (e) => {
+      modal.classList.add("_active");
+      document.body.classList.add("_lock");
+    });
+  });
+
+  modalCloseBtn.addEventListener("click", removeActive);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" || e.code === "Escape") {
+      removeActive();
+    }
+  });
+}
+
+// tooltip
+if (tooltipBtn) {
+  tooltipBtn.forEach((el) => {
+    el.addEventListener("click", (e) => {
+      let close = el.childNodes[1].childNodes[1];
+      let content = el.childNodes[1];
+      content.classList.toggle("active");
+
+      close.addEventListener("click", () => {
+        if (content.classList.contains("active")) {
+          content.classList.remove("_active");
+        }
+      });
+    });
+  });
+}
+
+// мобильное меню
+
+// меню бургер
+const iconMenu = document.querySelector(".menu__icon");
+const menuBody = document.querySelector(".menu__body");
+const menuLink = document.querySelectorAll(".menu__item");
+
+// const menuLang = document.querySelector(".header__lang");
+
+if (iconMenu) {
+  iconMenu.addEventListener("click", function (e) {
+    document.body.classList.toggle("_lock");
+    iconMenu.classList.toggle("_active");
+    menuBody.classList.toggle("_active");
+
+    // const div = document.createElement("div");
+    // div.classList.add("header__social");
+    // div.innerHTML = menuLang.textContent;
+    // menuBody.append(div);
+  });
+}
+// закрытие при клике
+menuLink.forEach((item) => {
+  item.addEventListener("click", () => {
+    document.body.classList.remove("_lock");
+    iconMenu.classList.remove("_active");
+    menuBody.classList.remove("_active");
+  });
+});
+
+const scrollBtn = document.querySelector(".roller__top .roller__btn");
+
+if (scrollBtn) {
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+      left: 0,
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+}

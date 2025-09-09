@@ -65,6 +65,7 @@
         height: 19px
         border-top: 3px solid rgba(196, 196, 196, 0.5)
         border-left: 3px solid rgba(196, 196, 196, 0.5)
+        transition: top 0.3s ease-in, left 0.3s ease-in
       &::after
         position: absolute
         content: ''
@@ -74,6 +75,15 @@
         height: 19px
         border-bottom: 3px solid rgba(196, 196, 196, 0.5)
         border-right: 3px solid rgba(196, 196, 196, 0.5)
+        transition: top 0.3s ease-in, right 0.3s ease-in
+      @media (any-hover: hover) and (pointer: fine)
+        &:hover
+          &::before
+            top: -11px
+            left: -18px
+          &::after
+            top: 157px
+            right: -6px
 
   &__title
     font-family: 'Montserrat'

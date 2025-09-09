@@ -50,6 +50,14 @@
       &:nth-child(3)
         --translation: calc(var(--skew-padding) * -1)
 
+  &__box
+    & .image
+      transition: transform 0.5s ease-in
+    @media (any-hover: hover)
+      &:hover
+        & .image
+          transform: scale(1.05)
+
   &__icon
     width: 50px
     height: 50px

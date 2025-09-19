@@ -58,6 +58,13 @@ a {
 }
 
 @font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
   font-family: "Montserrat";
   src: url("../fonts/Montserrat-Regular.woff2") format("woff2");
   font-weight: 400;
@@ -337,7 +344,7 @@ input {
 .first {
   position: relative;
   background-color: #fff;
-  background-image: url(../images/bg/first-bg.jpg);
+  background-image: url(../images/bg/first-bg-2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
@@ -352,17 +359,27 @@ input {
   bottom: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.35);
   z-index: 0;
 }
 .first__container {
-  padding-left: 207px;
-  padding-top: 200px;
+  padding-top: 165px;
   padding-bottom: 228px;
   z-index: 2;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 .first__head {
+  font-family: "Roboto";
   z-index: 2;
   position: relative;
   text-shadow: 0px 3px 36px #000000;
@@ -370,26 +387,35 @@ input {
   text-transform: uppercase;
   margin-bottom: 31px;
   letter-spacing: 0.09em;
+  font-size: 55px;
+  line-height: 1.1;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  text-align: center;
+  -webkit-transform: translateX(58px);
+  -ms-transform: translateX(58px);
+  transform: translateX(58px);
 }
 .first__head::after {
   position: absolute;
   content: "";
-  bottom: 0;
-  bottom: 77px;
+  bottom: 53px;
   height: 3px;
-  width: 272px;
+  left: -10px;
+  width: 665px;
   background-color: #F6F6F6;
 }
 .first__head span {
+  font-family: "Montserrat";
   letter-spacing: 0;
   display: block;
-  margin-top: 33px;
+  margin-top: 22px;
   font-weight: 300;
-  font-size: 55px;
-  line-height: 1.2181818182;
+  font-size: 50px;
+  line-height: 0.8;
   color: #FFFFFF;
   text-shadow: 0px 2px 14px #000000;
-  text-transform: lowercase;
+  text-transform: uppercase;
 }
 .first__btn {
   position: relative;
@@ -408,6 +434,10 @@ input {
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  margin-left: 10%;
 }
 
 .features {
@@ -1520,9 +1550,6 @@ input {
   .menu__item:not(:last-child) {
     margin-right: 50px;
   }
-  .first__container {
-    padding-left: 15%;
-  }
   .about__boxes::before {
     bottom: 68px;
   }
@@ -1599,8 +1626,16 @@ input {
     clip-path: none;
   }
   .first__container {
-    padding-top: 15%;
-    padding-bottom: 15%;
+    padding-top: 20%;
+    padding-bottom: 10%;
+  }
+  .first__head {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+  .first__btn {
+    margin-left: 0;
   }
   .features__container,
 .about__container,
@@ -1850,7 +1885,9 @@ input {
     font-size: 35px;
   }
   .first__head::after {
-    bottom: 55px;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
   }
   .first__container {
     padding-left: 7%;
@@ -1968,6 +2005,9 @@ input {
   .fabric__boxes {
     height: 350px;
   }
+  .first__head {
+    font-size: 38px;
+  }
   .main-slider {
     width: 85%;
     height: 250px;
@@ -1980,8 +2020,11 @@ input {
   .first__head {
     font-size: 32px;
   }
+  .first__head::after {
+    bottom: 33px;
+  }
   .first__head span {
-    font-size: 28px;
+    font-size: 26px;
   }
   .first__btn {
     font-size: 18px;

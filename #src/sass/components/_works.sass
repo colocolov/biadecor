@@ -1,36 +1,59 @@
 .fabric
+  &:first-child
+    & .fabric__container::before
+      content: none
+
   &__container
     // transform: skewY(11deg)
     z-index: 2
     position: relative
     display: flex
+    &::before
+      position: absolute
+      content: ''
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+        // width: 100%
+      height: 2px
+      transform: skewy(var(--angle-right))
+      transform-origin: -1px 0
+      outline: 1px solid transparent
+      backface-visibility: hidden
+      display: inline-block
+      background: #FFF
+      z-index: -1
   &__head
     padding-left: 100px
     text-transform: lowercase
+    background-color: transparent
+    &::before
+      content: none
   &__boxes
     display: flex
     align-items: flex-end
     justify-content: center
     // --translation: 0
     position: relative
-    height: 493px
+    height: 592px
     width: 100%
-    padding-left: 60px
+    padding-left: 5px
     // padding-bottom: 20px
-    &::before
-      content: ""
-      position: absolute
-      left: 0
-      top: 0px
-      right: -120px
-      bottom: 0
-      transform: skewy(var(--angle-right))
-      transform-origin: -1px 0
-      outline: 1px solid transparent
-      backface-visibility: hidden
-      // z-index: 3
-      // background: #fff
-      z-index: -1
+    // &::before
+      // content: ""
+      // position: absolute
+      // left: 0
+      // top: 0px
+      // right: -120px
+      // bottom: 0
+      // transform: skewy(var(--angle-right))
+      // transform-origin: -1px 0
+      // outline: 1px solid transparent
+      // backface-visibility: hidden
+      // // z-index: 3
+      // // background: #fff
+      // z-index: -1
     &-last
       height: 128px
       align-items: flex-end
@@ -39,21 +62,21 @@
       color: $light
       &::before
         content: none
-    &-bg::after
-      position: absolute
-      content: ''
-      top: 0
-      right: -120px
-      bottom: 0
-      left: 0
-      // width: 100%
-      height: 100%
-      transform: skewy(var(--angle-right))
-      transform-origin: -1px 0
-      outline: 1px solid transparent
-      backface-visibility: hidden
-      display: inline-block
-      background: rgba(0, 0, 0, 0.5)
+    // &-bg::after
+    //   position: absolute
+    //   content: ''
+    //   top: 0
+    //   right: -120px
+    //   bottom: 0
+    //   left: 0
+    //   // width: 100%
+    //   height: 100%
+    //   transform: skewy(var(--angle-right))
+    //   transform-origin: -1px 0
+    //   outline: 1px solid transparent
+    //   backface-visibility: hidden
+    //   display: inline-block
+    //   background: rgba(0, 0, 0, 0.5)
 
     &-roller
       align-items: center
@@ -66,10 +89,10 @@
       &::after
         transform: none
         bottom: -120px
-    &-rome::before
-      background: url(../images/bg/rome.jpg) center / cover no-repeat
-    &-rollet::before
-      background: url(../images/bg/rollet.jpg) center / cover no-repeat
+    // &-rome::before
+    //   background: url(../images/bg/rome.jpg) center / cover no-repeat
+    // &-rollet::before
+    //   background: url(../images/bg/rollet.jpg) center / cover no-repeat
 
   &__slider
     height: 360px

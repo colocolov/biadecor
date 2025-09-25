@@ -1,7 +1,11 @@
 .main-slider
+  --mainSliderWidth: 720px
+  --mainSliderHeight: 440px
+
+
   position: relative
-  height: 360px
-  width: 600px
+  width: var(--mainSliderWidth)
+  height: var(--mainSliderHeight)
   // max-height: 800px
   background-color: $bgc
   // color: $grey
@@ -12,8 +16,8 @@
     display: flex
     justify-content: center
   &__slide
-    width: 600px
-    height: 360px
+    width: var(--mainSliderWidth)
+    height: var(--mainSliderHeight)
     // display: flex
     // align-items: center
     background-position: center

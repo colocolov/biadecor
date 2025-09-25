@@ -66,9 +66,12 @@
     margin-top: 50px
     &-first
       margin-top: 100px
-  .roller__container,
+  .roller__container
+    flex-direction: column
   .fabric__container
     flex-direction: column
+    &::before
+      transform: unset
   .roller__boxes
     align-items: flex-end
     padding-bottom: 0
@@ -115,21 +118,22 @@
     transform: translateX(-50%)
     top: 120px
 
-  .fabric__boxes-roller::before
-    bottom: 0
-    left: -15px
-    top: 0
-    right: -15px
-    background: url(../images/bg/roller.jpg) center/cover no-repeat
+  // .fabric__boxes-roller::before
+  //   bottom: 0
+  //   left: -15px
+  //   top: 0
+  //   right: -15px
+  //   background: url(../images/bg/roller.jpg) center/cover no-repeat
   .fabric__boxes
     align-items: center
     padding-left: 0
-  .fabric__boxes::before,
-  .fabric__boxes-bg::after
-    transform: skew(0)
-    transform-origin: center
-    right: -15px
-    left: -15px
+    height: auto
+  // .fabric__boxes::before,
+  // .fabric__boxes-bg::after
+  //   transform: skew(0)
+  //   transform-origin: center
+  //   right: -15px
+  //   left: -15px
 
 //
 //

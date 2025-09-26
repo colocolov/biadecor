@@ -271,10 +271,31 @@ input {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  gap: 25px;
 }
 .header__logo {
   height: 59px;
-  margin-right: 197px;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.header__logo span {
+  color: #FFFFFF;
+  font-size: 22px;
+  display: block;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-left: 15px;
+}
+.header__logo img {
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 .header__menu {
   margin-right: 78px;
@@ -363,7 +384,7 @@ input {
   z-index: 0;
 }
 .first__container {
-  padding-top: 165px;
+  padding-top: 115px;
   padding-bottom: 228px;
   z-index: 2;
   position: relative;
@@ -378,6 +399,21 @@ input {
   -ms-flex-direction: column;
   flex-direction: column;
 }
+.first__name {
+  color: #FFFFFF;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 50px;
+  margin-bottom: 35px;
+  -webkit-transform: translateX(58px);
+  -ms-transform: translateX(58px);
+  transform: translateX(58px);
+  border-bottom: 2px solid #fff;
+}
 .first__head {
   font-family: "Roboto";
   z-index: 2;
@@ -387,7 +423,7 @@ input {
   text-transform: uppercase;
   margin-bottom: 31px;
   letter-spacing: 0.09em;
-  font-size: 55px;
+  font-size: 45px;
   line-height: 1.1;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -402,7 +438,7 @@ input {
   bottom: 53px;
   height: 3px;
   left: -10px;
-  width: 665px;
+  width: 550px;
   background-color: #F6F6F6;
 }
 .first__head span {
@@ -684,6 +720,14 @@ input {
   align-items: center;
   width: 100%;
   padding-left: 60px;
+  gap: 30px;
+}
+.contacts__data {
+  color: #FFFFFF;
+}
+.contacts__name {
+  margin-bottom: 15px;
+  font-size: 26px;
 }
 .contacts__list {
   display: -webkit-box;
@@ -708,6 +752,7 @@ input {
   padding: 0;
 }
 .contacts__phone {
+  display: block;
   position: relative;
   line-height: 160%;
   color: #F6F6F6;
@@ -727,6 +772,9 @@ input {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+}
+.contacts__phone:not(:last-child) {
+  margin-bottom: 15px;
 }
 
 .box-img {
@@ -1202,6 +1250,10 @@ input {
   justify-content: space-between;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  gap: 10px;
 }
 @media (max-width: 768px) {
   .menu__list {
@@ -1249,7 +1301,7 @@ input {
   transition: 0.5s;
 }
 .menu__item:not(:last-child) {
-  margin-right: 63px;
+  margin-right: 43px;
 }
 .menu__item.current {
   color: #2D3142;
@@ -1615,7 +1667,8 @@ input {
     padding-top: 20%;
     padding-bottom: 10%;
   }
-  .first__head {
+  .first__head,
+.first__name {
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
@@ -1847,6 +1900,9 @@ input {
   .menu__item.current {
     color: #2D3142;
   }
+  .menu__list {
+    gap: 0;
+  }
   .social__item {
     margin-right: 0;
     margin-left: 30px;
@@ -1882,9 +1938,9 @@ input {
   }
   .contacts__info {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -2004,6 +2060,9 @@ input {
   }
   .first__head span {
     font-size: 26px;
+  }
+  .first__name {
+    font-size: 30px;
   }
   .first__btn {
     font-size: 18px;

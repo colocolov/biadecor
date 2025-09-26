@@ -13,6 +13,13 @@
     align-items: center
     width: 100%
     padding-left: 60px
+    gap: 30px
+  &__data
+    color: $white
+  &__name
+    margin-bottom: 15px
+    font-size: 26px
+  &__phones
   &__list
     display: flex
     align-items: center
@@ -27,6 +34,7 @@
       margin: 0
       padding: 0
   &__phone
+    display: block
     position: relative
     line-height: 160%
     color: #F6F6F6
@@ -41,3 +49,5 @@
       height: 2px
       background-color: $white
       transition: 0.5s
+    &:not(:last-child)
+      margin-bottom: 15px

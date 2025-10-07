@@ -316,9 +316,9 @@ input {
   margin-right: 30px;
 }
 .header__phone img {
-  -webkit-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 .header__lang {
   display: -webkit-box;
@@ -367,12 +367,12 @@ input {
   margin-right: 29px;
   background-color: #fff;
   border-radius: 50%;
-  padding: 5px;
 }
 .social__item img {
-  -webkit-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+  padding: 5px;
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .first {
@@ -499,6 +499,7 @@ input {
   --translation: 0;
   padding-left: 60px;
   position: relative;
+  padding-top: 40px;
   height: 436px;
 }
 .features__boxes::before {
@@ -745,7 +746,6 @@ input {
   height: 40px;
   background-color: #fff;
   border-radius: 50%;
-  padding: 11px;
 }
 .contacts__item:not(:last-child) {
   margin-right: 18px;
@@ -755,7 +755,7 @@ input {
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
   margin: 0;
-  padding: 0;
+  padding: 11px;
 }
 .contacts__phone {
   display: block;
@@ -1401,9 +1401,9 @@ input {
     transform: scale(1.1);
   }
   .social__item:hover img {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
   }
   .first__btn:hover {
     padding: 20px 40px;
@@ -1412,9 +1412,9 @@ input {
     filter: drop-shadow(0px 6px 11px rgba(45, 49, 66, 0.7));
   }
   .contacts__item:hover img {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(1.07);
+    -ms-transform: scale(1.07);
+    transform: scale(1.07);
   }
   .contacts__phone:hover::before {
     width: 100%;
@@ -1492,6 +1492,7 @@ input {
 @media (max-width: 1300px) {
   .features__boxes {
     padding-right: 60px;
+    padding-top: 30px;
   }
   .features__boxes::before {
     right: 0;
@@ -1919,6 +1920,8 @@ input {
     margin-left: 30px;
     width: 50px;
     height: 50px;
+  }
+  .social__item img {
     padding: 12px;
   }
   .social__item__logo {

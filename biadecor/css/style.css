@@ -258,6 +258,16 @@ input {
   z-index: 0;
 }
 
+.pswp__img {
+  cursor: pointer !important;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.pswp--touch .pswp__button--arrow {
+  visibility: visible;
+}
+
 .header {
   background-color: #4F5D75;
   padding-top: 18px;
@@ -355,6 +365,9 @@ input {
   width: 24px;
   height: 24px;
   margin-right: 29px;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 5px;
 }
 .social__item img {
   -webkit-transition: all 0.3s linear;
@@ -432,23 +445,14 @@ input {
   -ms-transform: translateX(58px);
   transform: translateX(58px);
 }
-.first__head::after {
-  position: absolute;
-  content: "";
-  bottom: 53px;
-  height: 3px;
-  left: -10px;
-  width: 550px;
-  background-color: #F6F6F6;
-}
 .first__head span {
   font-family: "Montserrat";
   letter-spacing: 0;
   display: block;
   margin-top: 22px;
   font-weight: 300;
-  font-size: 50px;
-  line-height: 0.8;
+  font-size: 38px;
+  line-height: 1;
   color: #FFFFFF;
   text-shadow: 0px 2px 14px #000000;
   text-transform: uppercase;
@@ -727,7 +731,6 @@ input {
 }
 .contacts__name {
   margin-bottom: 15px;
-  font-size: 26px;
 }
 .contacts__list {
   display: -webkit-box;
@@ -740,6 +743,9 @@ input {
 .contacts__item {
   width: 40px;
   height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 11px;
 }
 .contacts__item:not(:last-child) {
   margin-right: 18px;
@@ -1053,7 +1059,7 @@ input {
 .fabric__container::before {
   position: absolute;
   content: "";
-  top: 0;
+  top: 8px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -1169,6 +1175,11 @@ input {
   background-size: cover;
   -webkit-filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.3)) drop-shadow(-3px -3px 10px rgba(255, 255, 255, 0.18));
   filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.3)) drop-shadow(-3px -3px 10px rgba(255, 255, 255, 0.18));
+}
+.main-slider img {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 .main-slider__btn {
   position: absolute;
@@ -1908,6 +1919,7 @@ input {
     margin-left: 30px;
     width: 50px;
     height: 50px;
+    padding: 12px;
   }
   .social__item__logo {
     height: 40px;
@@ -1928,6 +1940,9 @@ input {
     padding-left: 7%;
     padding-top: 25%;
   }
+  .fabric__container::before {
+    top: 0;
+  }
   .features__boxes,
 .about__boxes {
     -ms-grid-columns: 1fr;
@@ -1947,6 +1962,9 @@ input {
   }
   .contacts__phone {
     margin-bottom: 15px;
+  }
+  .contacts__name {
+    text-align: center;
   }
   .box-btns {
     -ms-flex-wrap: wrap;
@@ -2040,8 +2058,13 @@ input {
   .fabric__head {
     margin-top: 20px;
   }
-  .first__head {
-    font-size: 38px;
+  .first__head,
+.first__head span,
+.first__name {
+    font-size: 32px;
+  }
+  .first__btn {
+    font-size: 18px;
   }
   .main-slider {
     width: 85%;
@@ -2051,6 +2074,8 @@ input {
 @media (max-width: 480px) {
   .first__container {
     padding-top: 35%;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .first__head {
     font-size: 32px;
@@ -2061,11 +2086,13 @@ input {
   .first__head span {
     font-size: 26px;
   }
-  .first__name {
-    font-size: 30px;
+  .first__head span,
+.first__name {
+    font-size: 28px;
   }
-  .first__btn {
-    font-size: 18px;
+  .first__head {
+    font-size: 26px;
+    letter-spacing: 0.95px;
   }
   .roller__boxes {
     -ms-grid-rows: 250px 1fr;

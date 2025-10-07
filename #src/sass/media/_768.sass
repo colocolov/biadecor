@@ -43,6 +43,7 @@
     margin-left: 30px
     width: 50px
     height: 50px
+    padding: 12px
     &__logo
       height: 40px
       z-index: 10
@@ -59,6 +60,10 @@
     padding-left: 7%
     padding-top: 25%
 
+  .fabric__container
+    &::before
+      top: 0
+
   .features__boxes,
   .about__boxes
     grid-template-columns: 1fr
@@ -74,6 +79,8 @@
       justify-content: center
     &__phone
       margin-bottom: 15px
+    &__name
+      text-align: center
 
   .box-btns
     flex-wrap: wrap

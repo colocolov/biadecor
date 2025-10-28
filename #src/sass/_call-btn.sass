@@ -1,0 +1,165 @@
+.call-btn
+  content: ''
+  position: fixed
+  bottom: 25px
+  right: 25px
+  width: 54px
+  height: 54px
+  background-color: #2E6BA9
+  color: #000
+  border-radius: 50%
+  padding: 5px
+  display: flex
+  align-items: center
+  justify-content: center
+  z-index: 999
+  // animation: call-btn-anim 0.8s ease-out forwards
+  animation: myAnim 2.5s ease 0.5s infinite normal none
+  &::before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 65px
+    height: 65px
+    border: 1px solid rgba(#FFD230, 0.85)
+    transform: translateX(-50%) translateY(-50%)
+    border-radius: 50%
+    animation: myAnimBef 2.5s ease 0.5s infinite normal none
+    pointer-events: none
+  &::after
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 80px
+    height: 80px
+    border: 1px solid rgba(#FFD230, 0.85)
+    transform: translateX(-50%) translateY(-50%)
+    border-radius: 50%
+    animation: myAnimBef 3.5s ease 0.7s infinite normal none
+    pointer-events: none
+  img
+    width: 28px
+    height: 28px
+  &--viber
+    display: none
+    width: 0
+    height: 0
+  &--whatsapp
+    display: none
+    width: 0
+    height: 0
+
+@keyframes myAnim
+  0%
+    animation-timing-function: ease-out
+    transform: scale(1)
+    transform-origin: center center
+  10%
+    animation-timing-function: ease-in
+    transform: scale(0.91)
+  17%
+    animation-timing-function: ease-out
+    transform: scale(0.98)
+  33%
+    animation-timing-function: ease-in
+    transform: scale(0.87)
+  45%
+    animation-timing-function: ease-out
+    transform: scale(1)
+
+
+@keyframes myAnimBef
+  0%
+    opacity: 0.8
+    transform: translateX(-50%) translateY(-50%) scale(0.9)
+  80%
+    opacity: 0
+    transform: translateX(-50%) translateY(-50%) scale(1.5)
+  100%
+    opacity: 0
+    transform: translateX(-50%) translateY(-50%) scale(2.5)
+
+@keyframes myAnimRot
+  0%,
+  100%
+    transform: rotate(0deg)
+    transform-origin: 50% 50%
+  10%
+    transform: rotate(8deg)
+  20%,
+  40%,
+  60%
+    transform: rotate(-10deg)
+  30%,
+  50%,
+  70%
+    transform: rotate(10deg)
+  80%
+    transform: rotate(-8deg)
+  90%
+    transform: rotate(8deg)
+
+
+@media screen and (max-width: 479.98px)
+  .call-btn
+    animation: none
+    width: 100%
+    bottom: 0
+    right: 0
+    left: 0
+    border-radius: 0
+    padding: 10px
+    justify-content: space-evenly
+    height: 78px
+    background-color: #fff
+    gap: 15px
+    box-shadow: 0 -7px 9px -7px rgba(0, 0, 0, 0.3)
+    &::before,
+    &::after
+      content: none
+      animation: none
+    // img
+    //   color: #000
+    //   fill: #000
+    //   stroke: #000
+    //   background-color: #000
+    &--viber
+      display: flex
+      align-items: center
+      justify-content: center
+      gap: 3px
+      width: auto
+      height: 28px
+      flex-basis: 32%
+      font-size: 15px
+      img
+        display: inline-block
+    &--phone
+      background-color: #2E6BA9
+      height: 50px
+      width: 50px
+      padding: 7px
+      border-radius: 50%
+      display: flex
+      align-items: center
+      justify-content: center
+      animation: myAnimRot 2s ease 1s infinite forwards
+      flex-shrink: 0
+      // flex-grow: 1
+      // flex-basis: 30%
+    &--whatsapp
+      display: flex
+      align-items: center
+      gap: 3px
+      width: auto
+      height: 28px
+      flex-basis: 32%
+      font-size: 15px
+      img
+        display: inline-block
+
+
+
+

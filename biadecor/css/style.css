@@ -148,6 +148,7 @@ input {
   flex-direction: column;
   min-height: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 .main {
@@ -1380,6 +1381,318 @@ input {
   transform: rotate(45deg);
 }
 
+.call-btn {
+  content: "";
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 54px;
+  height: 54px;
+  background-color: #2E6BA9;
+  color: #000;
+  border-radius: 50%;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 999;
+  -webkit-animation: myAnim 2.5s ease 0.5s infinite normal none;
+  animation: myAnim 2.5s ease 0.5s infinite normal none;
+}
+.call-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 65px;
+  height: 65px;
+  border: 1px solid rgba(255, 210, 48, 0.85);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 50%;
+  -webkit-animation: myAnimBef 2.5s ease 0.5s infinite normal none;
+  animation: myAnimBef 2.5s ease 0.5s infinite normal none;
+  pointer-events: none;
+}
+.call-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  border: 1px solid rgba(255, 210, 48, 0.85);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 50%;
+  -webkit-animation: myAnimBef 3.5s ease 0.7s infinite normal none;
+  animation: myAnimBef 3.5s ease 0.7s infinite normal none;
+  pointer-events: none;
+}
+.call-btn img {
+  width: 28px;
+  height: 28px;
+}
+.call-btn--viber {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.call-btn--whatsapp {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+@-webkit-keyframes myAnim {
+  0% {
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+  }
+  10% {
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+  }
+  17% {
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+  }
+  33% {
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+  }
+  45% {
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes myAnim {
+  0% {
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+  }
+  10% {
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+  }
+  17% {
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+  }
+  33% {
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+  }
+  45% {
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes myAnimBef {
+  0% {
+    opacity: 0.8;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.9);
+    transform: translateX(-50%) translateY(-50%) scale(0.9);
+  }
+  80% {
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(1.5);
+    transform: translateX(-50%) translateY(-50%) scale(1.5);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(2.5);
+    transform: translateX(-50%) translateY(-50%) scale(2.5);
+  }
+}
+@keyframes myAnimBef {
+  0% {
+    opacity: 0.8;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.9);
+    transform: translateX(-50%) translateY(-50%) scale(0.9);
+  }
+  80% {
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(1.5);
+    transform: translateX(-50%) translateY(-50%) scale(1.5);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(2.5);
+    transform: translateX(-50%) translateY(-50%) scale(2.5);
+  }
+}
+@-webkit-keyframes myAnimRot {
+  0%, 100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+  10% {
+    -webkit-transform: rotate(8deg);
+    transform: rotate(8deg);
+  }
+  20%, 40%, 60% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  30%, 50%, 70% {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+  80% {
+    -webkit-transform: rotate(-8deg);
+    transform: rotate(-8deg);
+  }
+  90% {
+    -webkit-transform: rotate(8deg);
+    transform: rotate(8deg);
+  }
+}
+@keyframes myAnimRot {
+  0%, 100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+  10% {
+    -webkit-transform: rotate(8deg);
+    transform: rotate(8deg);
+  }
+  20%, 40%, 60% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  30%, 50%, 70% {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+  80% {
+    -webkit-transform: rotate(-8deg);
+    transform: rotate(-8deg);
+  }
+  90% {
+    -webkit-transform: rotate(8deg);
+    transform: rotate(8deg);
+  }
+}
+@media screen and (max-width: 479.98px) {
+  .call-btn {
+    -webkit-animation: none;
+    animation: none;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-radius: 0;
+    padding: 10px;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    height: 78px;
+    background-color: #fff;
+    gap: 15px;
+    -webkit-box-shadow: 0 -7px 9px -7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -7px 9px -7px rgba(0, 0, 0, 0.3);
+  }
+  .call-btn::before, .call-btn::after {
+    content: none;
+    -webkit-animation: none;
+    animation: none;
+  }
+  .call-btn--viber {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 3px;
+    width: auto;
+    height: 28px;
+    -ms-flex-preferred-size: 32%;
+    flex-basis: 32%;
+    font-size: 15px;
+  }
+  .call-btn--viber img {
+    display: inline-block;
+  }
+  .call-btn--phone {
+    background-color: #2E6BA9;
+    height: 50px;
+    width: 50px;
+    padding: 7px;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-animation: myAnimRot 2s ease 1s infinite forwards;
+    animation: myAnimRot 2s ease 1s infinite forwards;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+  .call-btn--whatsapp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 3px;
+    width: auto;
+    height: 28px;
+    -ms-flex-preferred-size: 32%;
+    flex-basis: 32%;
+    font-size: 15px;
+  }
+  .call-btn--whatsapp img {
+    display: inline-block;
+  }
+}
 @media (min-width: 992px) {
   .menu__item:hover::before {
     width: 100%;
